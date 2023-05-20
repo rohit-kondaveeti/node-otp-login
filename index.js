@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 
 // Create a MySQL connection pool
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "otp-login",
+  host: "bna88qkq9kexckmnlr53-mysql.services.clever-cloud.com",
+  user: "u1fdguwnzcm6zhyw",
+  password: "V6Zc6iCKQjb3wa0YAMK7",
+  database: "bna88qkq9kexckmnlr53",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
