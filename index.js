@@ -71,7 +71,7 @@ app.get("/login", (req, res) => {
               // Send the OTP to the user's email
               sendEmail(email, otp);
 
-              res.json({ message: "OTP generated and sent successfully1" });
+              res.json({ message: "OTP generated and sent successfully" });
             }
           );
         } else {
