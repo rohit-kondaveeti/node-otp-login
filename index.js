@@ -71,7 +71,7 @@ app.get("/login", (req, res) => {
               // Send the OTP to the user's email
               sendEmail(email, otp);
 
-              res.json({ message: "OTP generated and sent successfully" });
+              res.json({ message: "OTP generated and sent successfully1" });
             }
           );
         } else {
@@ -119,8 +119,7 @@ app.get("/verify-otp", (req, res) => {
         const blocked_untill = new Date(
           currentTimestamp.getTime() + 60 * 60 * 1000
         );
-        console.log(blocked_untill);
-        console.log(new Date());
+
         if (
           result[0].blocked_untill == null ||
           result[0].blocked_untill < new Date()
@@ -151,7 +150,11 @@ app.get("/verify-otp", (req, res) => {
               });
             } else {
               pool.query(
-                "UPDATE otps SET attempts=attempts+1 WHERE email=?",
+                "UPDATE otps SET " +
+                  "attempts" +
+                  "=" +
+                  "attempts+1" +
+                  " WHERE email=?",
                 [email],
                 (err, result)
               );
